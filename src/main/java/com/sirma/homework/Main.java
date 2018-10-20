@@ -22,7 +22,7 @@ public class Main {
         Map<Integer, List<Employee>> mapProjectEmployees = ReadDataFromFile.getDataInMap();
         Set<EmployeesWorkingTogether> result = employeesService.getEmployeesWorkingTogether(mapProjectEmployees);
 
-        System.out.println("The 2 employees, who have worked together the most are:");
+        System.out.println("The result is:");
         result.stream().sorted().limit(1).forEach(System.out::println);
     }
 }
