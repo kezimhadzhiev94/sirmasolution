@@ -16,7 +16,7 @@ public class Employee {
      * @param employeeId id of the employee.
      * @param projectId id of the project, that employee has worked.
      * @param dateFrom from which date.
-     * @param dateTo when he finish worked on that project. (NULL if it is still working)
+     * @param dateTo when he finish worked on that project.
      */
     public Employee(int employeeId, int projectId, ChronoLocalDate dateFrom, ChronoLocalDate dateTo) {
         this.employeeId = employeeId;

@@ -9,8 +9,14 @@ public class EmployeesWorkingTogether implements Comparable<EmployeesWorkingToge
     private int otherEmployeeId;
     private int daysWorkingTogether;
 
-    public EmployeesWorkingTogether(int employee, int otherEmployeeId, int daysWorkingTogether) {
-        this.employeeId = employee;
+    /**
+     * Employees who worked together.
+     * @param employeeId id of the employee.
+     * @param otherEmployeeId id of other employee.
+     * @param daysWorkingTogether how long they worked together.
+     */
+    public EmployeesWorkingTogether(int employeeId, int otherEmployeeId, int daysWorkingTogether) {
+        this.employeeId = employeeId;
         this.otherEmployeeId = otherEmployeeId;
         this.daysWorkingTogether = daysWorkingTogether;
     }

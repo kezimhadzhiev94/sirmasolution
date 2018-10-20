@@ -16,6 +16,11 @@ import com.sirma.homework.model.EmployeesWorkingTogether;
  */
 public class EmployeesService {
 
+    /**
+     * Get Employees who have worked together.
+     * @param projectIdEmployeesMap map projectid and employees who worked on that project.
+     * @return employees who have worked together and how long.
+     */
     public Set<EmployeesWorkingTogether> getEmployeesWorkingTogether(Map<Integer, List<Employee>> projectIdEmployeesMap) {
         Set<EmployeesWorkingTogether> result = new HashSet<>();
 

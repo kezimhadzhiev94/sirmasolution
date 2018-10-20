@@ -1,5 +1,6 @@
 package com.sirma.homework.files;
 
+import java.time.chrono.ChronoLocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -50,7 +51,6 @@ public class ReadDataFromFile {
                 mapProjectIdEmployees.putIfAbsent(employee.getProjectId(), new ArrayList<>());
                 mapProjectIdEmployees.get(employee.getProjectId()).add(employee);
             }
-
         } catch (FileNotFoundException e) {
             //TODO : Log this exception.
             e.printStackTrace();
@@ -64,13 +64,13 @@ public class ReadDataFromFile {
 
         Integer emplId = input.nextInt();
         Integer projectId = input.nextInt();
-        LocalDate dateFrom = LocalDate.parse(input.next(), formatter);
-        LocalDate LocalDateTo = parseDateTo(input.next(), formatter);
+        ChronoLocalDate dateFrom = LocalDate.parse(input.next(), formatter);
+        ChronoLocalDate dateTo = parseDateTo(input.next(), formatter);
 
-        return new Employee(emplId, projectId, dateFrom, LocalDateTo);
+        return new Employee(emplId, projectId, dateFrom, dateTo);
     }
 
-    private static LocalDate parseDateTo(final String dateToString, final DateTimeFormatter formatter) {
+    private static ChronoLocalDate parseDateTo(final String dateToString, final DateTimeFormatter formatter) {
         return dateToString.equals(VALUE_FOR_TODAY) ? LocalDate.now() : LocalDate.parse(dateToString, formatter);
     }
 
