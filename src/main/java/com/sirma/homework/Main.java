@@ -17,9 +17,9 @@ import com.sirma.homework.service.EmployeesService;
 public class Main {
 
     public static void main(String[] args) {
-        EmployeesService employeesService = new EmployeesService();
-
         Map<Integer, List<Employee>> mapProjectEmployees = ReadDataFromFile.getDataInMap();
+
+        EmployeesService employeesService = new EmployeesService();
         Set<EmployeesWorkingTogether> result = employeesService.getEmployeesWorkingTogether(mapProjectEmployees);
 
         System.out.println("The result is:");
